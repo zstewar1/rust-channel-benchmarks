@@ -11,6 +11,11 @@ flume = "0.10"
 futures = { version = "0.3", features = ["thread-pool"] }
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
 kanal = { git = "https://github.com/fereidani/kanal" }
+kanal-parkinglot = { path = "../kanal-parkinglot" }
+kanal-stdlock = { path = "../kanal-stdlock" }
+clap = { version = "4.0.17", features = ["derive"] }
+rand = "0.8.5"
+rand_chacha = "0.3.1"
 
 [profile.release]
 opt-level = 3
@@ -21,6 +26,10 @@ panic = 'abort'
 codegen-units = 1
 rpath = false
 
+[[bin]]
+name = "cpu-eater"
+path = "cpu-eater.rs"
+doc = false
 
 [[bin]]
 name = "crossbeam-channel"
@@ -35,6 +44,26 @@ doc = false
 [[bin]]
 name = "kanal-async"
 path = "kanal-async.rs"
+doc = false
+
+[[bin]]
+name = "kanal_parkinglot"
+path = "kanal_parkinglot.rs"
+doc = false
+
+[[bin]]
+name = "kanal_parkinglot-async"
+path = "kanal_parkinglot-async.rs"
+doc = false
+
+[[bin]]
+name = "kanal_stdlock"
+path = "kanal_stdlock.rs"
+doc = false
+
+[[bin]]
+name = "kanal_stdlock-async"
+path = "kanal_stdlock-async.rs"
 doc = false
 
 [[bin]]
