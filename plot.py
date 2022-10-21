@@ -9,8 +9,8 @@ from PIL import Image
 def read_data(files):
     benchs = {}
     # only to keep list shorted
-    names = ["kanal", "kanal-async", "kanal_parkinglot", "kanal_parkinglot-async", "kanal_stdlock", "kanal_stdlock-async",
-             "crossbeam-channel", "flume", "flume-async", "std::mpsc", "futures-channel"]
+    names = [] #"kanal", "kanal-async", "kanal_parkinglot", "kanal_parkinglot-async", "kanal_stdlock", "kanal_stdlock-async",
+             #"crossbeam-channel", "flume", "flume-async", "std::mpsc", "futures-channel"]
     for f in files:
         with open(f) as f:
             lines = f.readlines()
