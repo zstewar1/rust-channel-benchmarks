@@ -23,8 +23,6 @@ if [ "${1-}" = "--build" ]; then
   cargo build --release --bin kanal_stdlock
   cargo build --release --bin kanal_stdlock-async
   go build -o target/release/go_bench go.go
-else
-  rm -f target/*.csv target/*.png target/*.svg
 fi
 
 loadpid=

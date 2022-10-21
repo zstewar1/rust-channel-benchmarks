@@ -10,9 +10,9 @@ crossbeam-channel = "0.5"
 flume = "0.10"
 futures = { version = "0.3", features = ["thread-pool"] }
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
-kanal = { git = "https://github.com/fereidani/kanal" }
-kanal-parkinglot = { path = "../kanal-parkinglot" }
-kanal-stdlock = { path = "../kanal-stdlock" }
+kanal = { git = "https://github.com/zstewar1/kanal.git", branch = "main" }
+kanal-parkinglot = { git = "https://github.com/zstewar1/kanal.git", branch = "parkinglot" }
+kanal-stdlock = { git = "https://github.com/zstewar1/kanal.git", branch = "stdlock" }
 clap = { version = "4.0.17", features = ["derive"] }
 rand = "0.8.5"
 rand_chacha = "0.3.1"
